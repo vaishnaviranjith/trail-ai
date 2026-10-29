@@ -1,0 +1,153 @@
+{
+  "destination": "Goa",
+  "state": "Goa",
+  "country": "India",
+  "currency": "INR",
+  "description": "Sun-kissed beaches, Portuguese architecture, coastal waterfalls, and spicy Konkani seafood.",
+  "center_coordinates": {
+    "lat": 15.2993,
+    "lng": 74.1240
+  },
+  "emergency_contacts": [
+    { "name": "Goa Tourist Police Helpline", "phone": "1364", "type": "Police" },
+    { "name": "Emergency Medical Response", "phone": "108", "type": "Medical" },
+    { "name": "Disaster Helpline", "phone": "1077", "type": "Emergency" }
+  ],
+  "pois": [
+    {
+      "id": "poi_dudhsagar_falls",
+      "name": "Dudhsagar Waterfalls",
+      "category": "Waterfalls",
+      "tags": ["waterfall", "trekking", "adventure", "railway"],
+      "lat": 15.3144,
+      "lng": 74.3143,
+      "rating": 4.7,
+      "review_count": 22000,
+      "entry_fee_per_person": 500,
+      "typical_duration_minutes": 240,
+      "opening_time": "07:00",
+      "closing_time": "16:30",
+      "description": "Four-tiered sea of milk waterfall on the Mandovi river, surrounded by Bhagwan Mahaveer Sanctuary.",
+      "best_time_to_visit": "Early Morning",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "poi_hval_falls",
+      "name": "Harvalem (Arvalem) Waterfall",
+      "category": "Waterfalls",
+      "tags": ["waterfall", "nature", "heritage"],
+      "lat": 15.5562,
+      "lng": 74.0270,
+      "rating": 4.3,
+      "review_count": 5200,
+      "entry_fee_per_person": 20,
+      "typical_duration_minutes": 60,
+      "opening_time": "08:00",
+      "closing_time": "18:00",
+      "description": "Scenic 50-meter waterfall with a tranquil pool, near the ancient Pandava rock-cut caves.",
+      "best_time_to_visit": "Morning",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "poi_tambdi_surla_trek",
+      "name": "Tambdi Surla Waterfall Trail",
+      "category": "Trekking",
+      "tags": ["trekking", "forest", "ancient_temple", "biodiversity"],
+      "lat": 15.4411,
+      "lng": 74.2564,
+      "rating": 4.6,
+      "review_count": 3400,
+      "entry_fee_per_person": 100,
+      "typical_duration_minutes": 180,
+      "opening_time": "07:30",
+      "closing_time": "16:00",
+      "description": "Lush jungle trek along river crossings starting from a 12th-century Kadamba basalt stone temple.",
+      "best_time_to_visit": "Morning",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "poi_aguada_fort",
+      "name": "Aguada Fort & Portuguese Lighthouse",
+      "category": "Heritage",
+      "tags": ["fort", "heritage", "lighthouse", "ocean_view", "history"],
+      "lat": 15.4920,
+      "lng": 73.7735,
+      "rating": 4.5,
+      "review_count": 42000,
+      "entry_fee_per_person": 50,
+      "typical_duration_minutes": 90,
+      "opening_time": "09:30",
+      "closing_time": "18:00",
+      "description": "Well-preserved 17th-century Portuguese fortress overlooking Sinquerim Beach and the Arabian Sea confluence.",
+      "best_time_to_visit": "Late Afternoon",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "poi_basilica_bom_jesus",
+      "name": "Basilica of Bom Jesus, Old Goa",
+      "category": "Heritage",
+      "tags": ["church", "unesco", "heritage", "architecture", "history"],
+      "lat": 15.5008,
+      "lng": 73.9116,
+      "rating": 4.7,
+      "review_count": 35000,
+      "entry_fee_per_person": 0,
+      "typical_duration_minutes": 75,
+      "opening_time": "09:00",
+      "closing_time": "18:30",
+      "description": "UNESCO World Heritage Baroque church housing the sacred relics of St. Francis Xavier with basalt facade and gilded altars.",
+      "best_time_to_visit": "Morning",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "poi_palolem_beach",
+      "name": "Palolem Beach & Silent Noise Headland",
+      "category": "Beaches",
+      "tags": ["beach", "swimming", "kayaking", "sunset", "scenic"],
+      "lat": 15.0100,
+      "lng": 74.0232,
+      "rating": 4.7,
+      "review_count": 29000,
+      "entry_fee_per_person": 0,
+      "typical_duration_minutes": 120,
+      "opening_time": "06:00",
+      "closing_time": "20:00",
+      "description": "Crescent-shaped white sand cove bordered by coconut palms and calm turquoise waters ideal for dolphin watching and kayaking.",
+      "best_time_to_visit": "Sunset",
+      "difficulty": "Easy"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "hotel_goa_budget",
+      "name": "Palm Breeze Backpacker Retreat",
+      "category": "Budget Hotel",
+      "price_per_night": 1600,
+      "rating": 4.4,
+      "review_count": 420,
+      "lat": 15.4989,
+      "lng": 73.8278,
+      "address": "Fontainhas, Panaji, Goa",
+      "amenities": ["Free Wi-Fi", "Air Conditioning", "Breakfast", "Bicycle Rental"],
+      "room_type": "Standard Double Room",
+      "description": "Heritage-style budget stay in the vibrant Latin Quarter of Panaji."
+    }
+  ],
+  "food_places": [
+    {
+      "id": "food_vinayak",
+      "name": "Vinayak Family Restaurant",
+      "category": "Local Food",
+      "cuisine": "Goan & Coastal Seafood",
+      "specialties": ["Goan Fish Thali", "Prawns Balchao", "Sol Kadhi"],
+      "cost_for_two": 450,
+      "rating": 4.6,
+      "review_count": 8900,
+      "lat": 15.5890,
+      "lng": 73.7480,
+      "opening_time": "12:00",
+      "closing_time": "22:30",
+      "description": "Beloved local canteen famous for freshly caught fish thalis and authentic kokum sol kadhi."
+    }
+  ]
+}

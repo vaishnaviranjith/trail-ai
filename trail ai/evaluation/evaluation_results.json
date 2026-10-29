@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "evaluation_title": "TRIAL AI Model Evaluation vs Baseline Benchmark",
+    "model_version": "TRIAL-AI-v1.0.0-IEEE-ICUIS-ICARC",
+    "benchmark_dataset": "evaluation/test_dataset.json",
+    "dataset_size": 25,
+    "timestamp": "2026-10-02T13:38:21.232033Z",
+    "methodology": "Pairwise benchmark across 25 realistic traveler profiles comparing popularity/rating baseline against TRIAL AI multi-attribute normalized scoring and constraint route solving."
+  },
+  "metrics": {
+    "precision_at_5": {
+      "name": "Precision@5",
+      "unit": "ratio",
+      "baseline": 0.376,
+      "trial_ai": 0.915,
+      "description": "Fraction of top-5 recommended attractions matching user interests & ground truth."
+    },
+    "feasibility_rate": {
+      "name": "Itinerary Feasibility Rate",
+      "unit": "percentage",
+      "baseline": "72.0%",
+      "trial_ai": "96.0%",
+      "description": "Proportion of generated daily plans with zero time overlaps and realistic transit times."
+    },
+    "budget_mape": {
+      "name": "Budget MAPE",
+      "unit": "percentage",
+      "baseline": "36.8%",
+      "trial_ai": "14.1%",
+      "description": "Mean Absolute Percentage Error against user budget cap."
+    },
+    "avg_latency": {
+      "name": "Average Response Latency",
+      "unit": "ms",
+      "baseline": "0.0 ms",
+      "trial_ai": "0.4 ms",
+      "description": "End-to-end wall clock execution time per planning request."
+    },
+    "api_failure_rate": {
+      "name": "API Failure Rate",
+      "unit": "percentage",
+      "baseline": "0.0%",
+      "trial_ai": "0.0%",
+      "description": "Percentage of planning queries encountering server or execution exceptions."
+    },
+    "offline_success": {
+      "name": "Offline Retrieval Success",
+      "unit": "percentage",
+      "baseline": "80.0%",
+      "trial_ai": "100.0%",
+      "description": "Rate of successfully serialized and cached offline travel packages."
+    }
+  }
+}

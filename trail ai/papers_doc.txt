@@ -1,0 +1,286 @@
+=== PAGE 1 ===
+TRIAL AI – IEEE BASE PAPER ANALYSIS &
+ PROTOTYPE SPECIFICATION
+Prepared from the uploaded Trial AI proposal and current IEEE-indexed bibliographic records. This is an original
+analysis/companion document, not a reproduction of publisher PDFs.
+1. Proposal verification
+ The proposal is titled “TRIAL AI – AI-POWERED SMART TOURIST GUIDE”. It defines the objective as reducing
+travel-planning friction by coordinating destination recommendation, route planning, budget estimation, hotel
+recommendation, food/spot discovery and offline-oriented support.
+ The proposal lists 16 research works. It does not formally label one paper as the sole 'exact base paper'. However, its
+literature-survey table explicitly describes the 2025 “Smart Trip Planner for Personalized Tourism Itineraries” as very
+close to Trial AI, while identifying integrated modules, offline readiness and orchestration as differentiation areas.
+ The proposed technical architecture in the proposal is mobile application + Python/ML + Google Maps API +
+Firebase.
+2. Five verified base papers
+1. Smart Trip Planner for Personalized Tourism Itineraries
+ Authors
+Jeevan Pradish S; Prathish S; Sanjutha M; Tharunika R. C; et al.
+Venue
+2025 5th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS)
+Publication timing
+Conference: 26–28 Nov 2025; added to IEEE Xplore: 13 Feb 2026
+DOI
+10.1109/ICUIS67429.2025.11380545
+Role for Trial AI
+Closest match to Trial AI's integrated itinerary concept.
+Content summary
+ Accepts natural-language travel goals such as duration, destination, budget and interests.
+ Combines Generative AI, recommender-system ideas and optimization techniques.
+ Produces personalized itineraries and explains route/POI choices.
+ Uses location-aware information to keep recommendations realistic.
+ Direct relevance: conversational input → personalized itinerary → explainable POI/route decisions.
+Implementation boundary / limitation
+ The proposal should still specify its own concrete architecture, data model, APIs and offline behavior.
+ Trial AI can differentiate through coordinated hotel, food, budget and offline-ready modules.
+2. Artificial Intelligence–Driven Tourism Platform for Personalized, Safe,
+and Sustainable Journey Planning
+ Authors
+Nisal Mandira Thalpawila; Virajini Godapitiya
+Venue
+2026 6th International Conference on Advanced Research in Computing (ICARC)
+Publication timing
+Conference: 18–19 Feb 2026; added to IEEE Xplore: 31 Mar 2026
+DOI
+10.1109/ICARC68737.2026.11453805
+Role for Trial AI
+Most recent integrated-AI architecture reference in the proposal.
+Content summary
+
+
+=== PAGE 2 ===
+ Uses a modular tourism-planning framework.
+ Group recommendation uses Sentence-BERT embeddings plus LightGBM LambdaRank.
+ Itinerary generation combines content-based filtering, demographic collaborative filtering and XGBoost regression.
+ Budget module uses regression forecasting plus live API inputs for dynamic cost updates.
+ Reports NDCG@3 = 0.81, itinerary relevance RMSE = 0.47 and R² = 0.77, plus a reported 20–25% improvement in
+budget-estimation accuracy versus static baselines.
+Implementation boundary / limitation
+ More advanced than a typical student mini-project; Trial AI should use a smaller, reproducible implementation.
+ Group recommendation and sustainability can be optional extensions rather than mandatory MVP components.
+3. Personalized Travel Package With Multi-Point-of-Interest
+Recommendation Based on Crowdsourced User Footprints
+ Authors
+Zhiwen Yu; Huang Xu; Zhe Yang; Bin Guo
+Venue
+IEEE Transactions on Human-Machine Systems, Vol. 46, No. 1, pp. 151–158
+Publication timing
+2016
+DOI
+10.1109/THMS.2015.2446953
+Role for Trial AI
+Foundation for multi-POI personalized travel-package generation.
+Content summary
+ Models users and locations from location-based social-network footprints.
+ Uses collaborative filtering to infer preferred destinations.
+ Jointly considers user preference and spatiotemporal constraints.
+ Uses heuristic search for travel-route planning.
+ Prototype takes travel demands from a mobile client and returns multiple POIs with a visiting sequence.
+Implementation boundary / limitation
+ Focuses on travel-package/POI sequencing rather than a full all-in-one assistant.
+ Trial AI can extend this idea with hotel, food, budget and conversational orchestration.
+4. Personalized Attraction Recommendation System for Tourists Through
+Check-In Data
+ Authors
+Kraisak Kesorn; Wanarat Juraphanthong; A. Salaiwarakul
+Venue
+IEEE Access, Vol. 5, pp. 26703–26721
+Publication timing
+Published 29 Nov 2017
+DOI
+10.1109/ACCESS.2017.2778293
+Role for Trial AI
+Strong reference for adaptive user-interest modeling and attraction recommendation.
+Content summary
+ PTIS framework has three main parts: user-interest extraction/analysis, personalized attraction recommendation, and
+adaptation of the user model.
+ Uses Facebook check-in information as implicit preference evidence.
+ Addresses cold-start using close-friend check-in data and popularity information.
+ Ranks attractions using category proportion, context-aware recommendation, attraction weighting and ranking.
+ Dynamically updates user profiles using feedback/user actions.
+
+
+=== PAGE 3 ===
+Implementation boundary / limitation
+ The original approach depends on social-network data access and policies.
+ For a modern prototype, use consented profile inputs, public tourism datasets and live map/place APIs instead of
+relying on private social-network data.
+5. Improving Itinerary Recommendations for Tourists Through
+Metaheuristic Algorithms: An Optimization Proposal
+ Authors
+Maritzol Tenemaza; Sergio Luján-Mora; Angélica de Antonio; Jaime Ramírez
+Venue
+IEEE Access, Vol. 8, pp. 79003–79023
+Publication timing
+Published 24 Apr 2020; current version 11 May 2020
+DOI
+10.1109/ACCESS.2020.2990348
+Role for Trial AI
+Optimization reference for realistic itinerary construction.
+Content summary
+ Treats itinerary recommendation as an optimization problem.
+ Considers constraints such as tourist context, POIs, transportation and other real-world information.
+ Uses metaheuristic optimization to improve itinerary generation.
+ Useful for balancing multiple objectives instead of simply ranking attractions independently.
+ This paper is open-access under CC BY 4.0 according to the indexed record.
+Implementation boundary / limitation
+ Optimization can increase implementation complexity for a mini-project.
+ Trial AI can begin with a weighted scoring + constraint-based route planner and add metaheuristics as an advanced
+mode.
+
+
+=== PAGE 4 ===
+3. Exact relationship to Trial AI
+ Trial AI module
+Research basis
+AI recommendation
+Papers 1, 2, 4
+POI / attraction ranking
+Papers 1, 3, 4
+Route / itinerary generation
+Papers 1, 3, 5
+Context-aware decisions
+Papers 1, 4, 5
+Budget-aware planning
+Paper 2 + proposal requirement
+Hotel / food integration
+Proposal-level integration layer; not fully supplied by one paper
+Offline-ready support
+Proposal requirement; implement as a product-layer feature
+4. Full prototype build prompt
+You are a senior full-stack AI engineer and research-prototype architect. Build a working MVP named TRIAL AI –
+AI-POWERED SMART TOURIST GUIDE. Treat the uploaded Trial AI proposal as the functional specification and the
+five verified IEEE papers as research foundations. Do not copy copyrighted paper text, figures or source code.
+Re-implement only the functional ideas needed for the prototype and clearly label research-inspired components.
+GOAL:
+Create one coherent tourist-assistance workflow that accepts a destination, dates, party size, budget and travel
+preferences and returns a personalized, feasible, explainable trip plan containing attractions, route order, hotel options,
+food options, estimated cost, map view and an offline-ready package.
+TECH STACK:
+- Frontend: React + Vite + TypeScript, responsive/mobile-first UI.
+- Backend: Python FastAPI.
+- Database/Auth: Firebase Authentication + Firestore.
+- Maps/Places: Google Maps Platform (Geocoding, Places, Routes/Distance Matrix as applicable).
+- Recommendation service: Python module with normalized feature scoring.
+- Local/offline storage: browser IndexedDB for web MVP; if implementing native mobile, use the platform's local
+database/cache.
+- Optional AI layer: an LLM for natural-language preference parsing and itinerary explanation. Keep deterministic
+scoring/constraints as the source of truth for feasibility.
+INPUTS:
+destination, start_date, end_date, number_of_travelers, age-group/category preferences when voluntarily provided,
+budget, currency, interests, disliked categories, travel pace, food preferences, hotel preference, transport preference,
+maximum daily travel time, accessibility requirements if provided, and optional free-text request.
+DATA MODEL:
+User, Trip, PreferenceProfile, POI, Hotel, FoodPlace, RouteSegment, DailyPlan, BudgetItem, OfflinePackage,
+Feedback, RecommendationLog.
+RECOMMENDATION ENGINE:
+1. Parse user requirements into structured constraints.
+2. Retrieve candidate POIs/hotels/food places.
+3. Hard-filter impossible candidates: outside destination, closed at planned time, over strict budget cap, incompatible
+constraints.
+4. Compute explainable score:
+score = w_pref*preference_match + w_context*context_match + w_distance*distance_score + w_rating*quality_score
++ w_budget*budget_fit + w_time*schedule_fit.
+5. Normalize features to [0,1].
+6. Show the top candidates and explain the main reasons for each recommendation.
+7. Never fabricate live facts; if an API field is unavailable, mark it unknown or use clearly labeled mock data.
+ITINERARY ENGINE:
+- Convert ranked POIs into daily schedules.
+
+
+=== PAGE 5 ===
+- Respect opening hours, estimated visit duration, travel time, meal windows and daily time limits.
+- Prevent impossible overlaps.
+- Use a deterministic route/constraint algorithm first.
+- Optional advanced mode: use a metaheuristic or multi-objective optimizer inspired by the research literature.
+- Output day-by-day route order, time blocks, travel segments and reasons.
+BUDGET ENGINE:
+- Estimate hotel + transport + food + attraction/activity costs.
+- Show itemized costs and total.
+- Show min/expected/max where uncertainty exists.
+- Clearly mark estimates versus live prices.
+- Provide budget warnings when projected cost exceeds the user's limit.
+- Do not claim price accuracy without current data.
+HOTEL + FOOD:
+- Query Places/API or seeded dataset.
+- Filter by destination, rating/quality, price band, distance and preferences.
+- Integrate selected hotel and food stops into the itinerary instead of presenting disconnected lists.
+OFFLINE MODE:
+- Add “Download Trip Offline”.
+- Store itinerary, POI names, coordinates, essential descriptions, route sequence, emergency/contact information and
+timestamps locally.
+- When offline, display cached data and last-known route information.
+- Clearly show that live traffic, live opening status and real-time prices require connectivity.
+UI:
+1. Welcome/login.
+2. Plan a trip form.
+3. AI preference/chat input.
+4. Recommendation results.
+5. Day-wise itinerary.
+6. Interactive map.
+7. Hotels.
+8. Food & spots.
+9. Budget dashboard.
+10. Offline download.
+11. Saved trips.
+12. Feedback and preference update.
+BACKEND API:
+POST /auth/profile
+POST /trips
+POST /trips/{id}/plan
+GET /trips/{id}
+GET /trips/{id}/recommendations
+GET /trips/{id}/itinerary
+GET /trips/{id}/budget
+POST /trips/{id}/feedback
+POST /trips/{id}/offline-package
+GET /places/search
+GET /health
+SECURITY:
+- Never expose private API keys in frontend source.
+- Use environment variables and backend proxying where appropriate.
+- Validate all user inputs.
+- Add rate limiting or basic abuse protection.
+- Do not store unnecessary personal data.
+
+
+=== PAGE 6 ===
+- Request only permissions required for the feature.
+EVALUATION:
+Measure recommendation precision@K on a seeded test set, itinerary feasibility rate, budget absolute percentage error
+on test scenarios, average response latency, API failure rate, offline retrieval success rate and user feedback score.
+Compare the baseline (simple popularity/rating ranking) against the personalized scoring engine. Do not invent results;
+generate a test harness and report measured values.
+DEMO DATA:
+Provide a small seed dataset for at least 2 destinations, with POIs, opening hours, visit duration, categories,
+coordinates, hotel options, food options and approximate costs. Include mock mode so the application runs without
+paid APIs.
+DELIVERABLES:
+- Complete source tree.
+- README with setup commands.
+- .env.example.
+- Firebase setup instructions.
+- Google Maps API setup instructions.
+- Firestore schema.
+- API documentation.
+- Seed/mock dataset.
+- Unit tests for scoring, budget and itinerary constraints.
+- End-to-end demo flow.
+- Architecture diagram.
+- Research-to-module mapping.
+- Known limitations and future work.
+- Final demo checklist.
+IMPORTANT:
+Do not claim Trial AI is novel because the proposal itself says the individual techniques are established. Position the
+project as an integrated educational implementation. Cite the five research papers in the report and explain exactly
+which module each paper informs.
+5. Verified source links
+IEEE record – Smart Trip Planner: https://doi.org/10.1109/ICUIS67429.2025.11380545
+IEEE record – AI-Driven Tourism Platform: https://doi.org/10.1109/ICARC68737.2026.11453805
+IEEE/DBLP record – Personalized Travel Package: https://doi.org/10.1109/THMS.2015.2446953
+IEEE record – Personalized Attraction Recommendation: https://doi.org/10.1109/ACCESS.2017.2778293
+IEEE Access / article record – Improving Itinerary Recommendations: https://doi.org/10.1109/ACCESS.2020.2990348
+Note: Some IEEE papers are paywalled or license-restricted. This companion PDF provides original analysis and bibliographic verification; it
+does not reproduce publisher-owned full-text papers.
+
+
