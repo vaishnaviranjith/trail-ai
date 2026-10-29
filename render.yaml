@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: trail-ai-smart-trip-planner
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      cd "trail ai/frontend" && npm install && npm run build
+    startCommand: cd "trail ai/backend" && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: NODE_VERSION
+        value: 20.12.0
+    healthCheckPath: /health
